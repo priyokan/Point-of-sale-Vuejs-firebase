@@ -1,7 +1,6 @@
 <template>
     <div>
-        <b-container style='position:relative;
-                    top:75px'>
+        <b-container style='position:relative;top:20px;'>
             <b-carousel
             id="carousel-1"
             v-model="slide"

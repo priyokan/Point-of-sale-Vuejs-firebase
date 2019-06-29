@@ -1,7 +1,7 @@
 <template>
     <div>
         <Slider :menus='menu' ></Slider>           
-        <Menus :menus='menu' class="position-relative"></Menus>
+        <Menus :menus='menu' class="position-relative mt-5"></Menus>
     </div>
 </template>
 

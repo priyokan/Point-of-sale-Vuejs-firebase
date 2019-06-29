@@ -1,17 +1,19 @@
 <template>
     <div id='login'>
-        <b-container  
-            class="shadow-lg"  
+        <b-container    
             style="
             background:none; 
             margin:auto;
-            padding-top:4px;
+            padding-bottom:50px;    
             border-radius:20px;
             position:relative;
-            border:2px solid #ffffff;
-            width:400px;
-            height:350px">
-            <div>                    
+            box-shadow:4px 8px 30px 10px #2d2d2d;
+            border:5px solid #ffffff;
+            width:400px;">
+                    <img src="../../img/koki.svg" alt=""
+                    style="width:50%;margin-bottom:-50px">
+            <div>    
+                <b-form>
                     <b-form-group id="group-username">
                         <h3 class="">@</h3>
                         <b-form-input
@@ -40,16 +42,8 @@
                     </b-form-group>
                     <b-alert show variant="danger" v-show="alert"> {{alert}} tidak boleh kosong </b-alert>
                     <b-alert show variant="danger" v-show="salah">{{salah}}</b-alert>
-                    <b-form-checkbox
-                        id="cookie"
-                        v-model="cookie"
-                        value=true
-                        unchecked-value=false
-                        class='text-left m-2'
-                        >
-                        Ingat saya
-                    </b-form-checkbox>
-                    <b-button variant="primary" class="mt-4 pt-4" pill @click="submit">Login</b-button>
+                        <b-button variant="primary" type='submit' class="mt-4 pt-4" pill >Login</b-button>
+                    </b-form>                
                 </div>
         </b-container>
     </div>
@@ -131,10 +125,12 @@ export default {
 }
 #login .input{
     border: none;
-    border-bottom: 1px solid #c8c8c8;
-    margin-top:-10px;
+    border-bottom: 1px solid #ffffff;
+    margin-top:0px;
     padding-left:30px;
     padding-right:30px;
+    background-color:rgba(59, 53, 53, 0.555);   
+    color: #ffffff;
 }
  #login .img{
     position: relative;
@@ -161,54 +157,6 @@ export default {
 #login .btn{
     width: 100%;
     height: 50px;
-}
-.ucapan-login{
-    position: absolute;
-    top: 0%;
-    color:#ffffff;
-    right: 0px;
-    margin-left: -15px;
-    background: linear-gradient(to left bottom,#4EAFBA,#47B199);
-    height: 350px;
-    width: 300px;
-    padding: auto;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    z-index: 2;
-    transition: border-radius 3s,right 2s,;
-}
-.pergeseran-kiri-ucapan{
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-        right: 500px;
-}
-.pergeseran-kanan-ucapan{
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
-        right: 0px;
-}
-.ucapan-login .btn-ucapan{
-    background:none;
-    border:2px solid #ffffff;
-    color:#ffffff;
-    position: absolute;
-    bottom: 10%;    
-    left: 10%;
-}
-.form{
-    position: relative;;
-    top: 0%;
-    transition:left 2s;
-}
-.pergeseran-kiri-form{
-        left: 00px;
-}
-.pergeseran-kanan-form{
-        left: 300px;
-}
+}       
 </style>
 

@@ -1,6 +1,7 @@
 <template>
-    <div  style=" background-image: url('../img/dark-wood-3840x2160.jpg')">
+    <div>       
        <div><img src="../img/dark-wood-3840x2160.jpg" style="position:fixed;width:100%;left:0px;z-index:-4;" ></div> 
+         <div class="" style="width:100vw;height:60px"></div>
         <Navbar></Navbar>
         <Home :menu='Menus'></Home>
         <Footer></Footer>

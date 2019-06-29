@@ -3,7 +3,7 @@
         <b-navbar type="dark" class="p-2 mb-0" style="background-image: linear-gradient(rgb(35, 35, 35), rgba(35, 35, 35,0));height:70px;position:fixed;width:100vw;top:0px;z-index:100">
             <!-- <div class="position-fixed" style="z-index:1"> -->
                 <b-container>
-                    <b-navbar-brand href="#">NavBar</b-navbar-brand>
+                    <img src="../../img/koki.svg" style="width:5%;margin-top:-5px;margin-right:2%" alt="">
 
                     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -31,7 +31,7 @@
                     <b-nav-item-dropdown right>
                     <!-- Using 'button-content' slot -->
                     <template slot="button-content"><em>User</em></template>
-                    <b-dropdown-item href="#" @click="ladmin">Login Admin</b-dropdown-item>
+                    <b-dropdown-item to="/admin">Login Admin</b-dropdown-item>
                     <b-dropdown-item href="#">Logout</b-dropdown-item>
                     </b-nav-item-dropdown>
                 </b-navbar-nav>
@@ -48,13 +48,7 @@ export default {
         return {
             
         }
-    },
-    methods:{
-        ladmin(){
-            this.$emit('ladmin')
-        }
-    }
-
+    },    
 
 }
 </script>
